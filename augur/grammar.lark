@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 //            B Language Grammar
 //           Author: Jahan Addison
-//              LALR(k) Grammar
+//              LALR(1) Grammar
 /////////////////////////////////////////////////////////////
 
 // License: CC0 https://creativecommons.org/public-domain/cc0/

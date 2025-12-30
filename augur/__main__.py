@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    from chakram import parser
+    from augur import parser
     from argparse import ArgumentParser
 
     args_parser = ArgumentParser()
