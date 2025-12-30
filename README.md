@@ -1,13 +1,13 @@
-<img src="docs/chakram-logo.png" width="800px" alt="logo" > </img>
+<img src="docs/augur-logo.png" width="800px" alt="logo" > </img>
 
 
-### Compiler Frontend (Lexer, Parser) for the B Language
+## (Lexer, Parser) for a "modern" version of the B Language
 
-Chakram provides a LALR(1) grammar and parser generator (via [Lark](https://github.com/lark-parser/lark)). Check out [language details on the B language](https://www.bell-labs.com/usr/dmr/www/btut.pdf), [and syntax here](https://www.bell-labs.com/usr/dmr/www/kbman.html). You can find a link to my grammar [here](https://github.com/jahan-addison/chakram/blob/master/chakram/grammar.lark).
+Augur provides a LALR(1) grammar and parser generator (via [Lark](https://github.com/lark-parser/lark)). Check out [language details on the B language](https://www.bell-labs.com/usr/dmr/www/btut.pdf), [and syntax here](https://www.bell-labs.com/usr/dmr/www/kbman.html). You can find a link to my grammar [here](https://github.com/jahan-addison/augur/blob/master/augur/grammar.lark).
 
 This project was primarily created for [credence](https://github.com/jahan-addison/credence) as an easy-to-use first-pass frontend.
 
-Chakram additionally provides factory methods for the parse tree as an AST with json, strings, and `Lark.tree`:
+Augur additionally provides factory methods for the parse tree as an AST with json, strings, and `Lark.tree`:
 
 * `parse_source_program(source_program: str, debug=True) -> Lark.Tree`
 * `parse_source_program_as_string(source_program: str, pretty: bool = True, debug=True) -> str`
@@ -60,7 +60,7 @@ Symbol_Table = Dict[str, _Meta]
 ### Usage Example
 
 ```python
-from chakram import parser
+from augur import parser
 with open(path_to_b_source_program) as file:
     print(parser.get_source_program_ast_as_json(file.read()))
 ```
@@ -82,11 +82,11 @@ There are a few differences between the compiler and B specification, namely:
 
 ### Dependencies
 
-`chakram` uses `poetry` for dependency management. Simply run `poetry install` to install dependencies.
+Augur uses `poetry` for dependency management. Simply run `poetry install` to install dependencies.
 
 ### Tests
 
-**Chakram has 90% code coverage.** Note that tests of ast nodes are proofs of correction to the grammar.
+**Augur has 90% code coverage.** Note that tests of ast nodes are proofs of correction to the grammar.
 
 * Use `make run` to run the parser on the first B program example
 * Use `make test` to run the test suite and verify grammar correctness

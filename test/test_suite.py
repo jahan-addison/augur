@@ -1,14 +1,14 @@
 import pytest
 from os import getcwd
 
-from chakram import __version__
-from chakram.parser import Parser, Syntax_Error
-from chakram.parser import parse_source_program, parse_source_program_as_string
-from chakram.parser import (
+from augur import __version__
+from augur.parser import Parser, Syntax_Error
+from augur.parser import parse_source_program, parse_source_program_as_string
+from augur.parser import (
     get_source_program_symbol_table,
     get_source_program_symbol_table_as_json,
 )
-from chakram.parser import (
+from augur.parser import (
     get_source_program_as_ast,
     get_source_program_ast_as_string,
     get_source_program_ast_as_json,

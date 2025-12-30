@@ -1,5 +1,5 @@
 
-project = chakram
+project = augur
 
 type:
 	poetry run python -m mypy --ignore-missing-imports **/*.py
@@ -8,7 +8,7 @@ lint: type
 	poetry run python -m flake8 $(project)/
 
 test: lint
-	poetry run pytest --cov-branch --cov=chakram --disable-warnings -s
+	poetry run pytest --cov-branch --cov=augur --disable-warnings -s
 
 run: lint
 	# run the first example
